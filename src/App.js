@@ -23,7 +23,7 @@ export default function App() {
   //compoennt did update
   useEffect(() => {
     const context = canvasRef.current.getContext("2d");
-    context.clearRect(0, 0, window.innerHeight, window.innerWidth);
+    
 
     let linkRef;
 
@@ -34,8 +34,9 @@ export default function App() {
 
     //drawImage
     // context.fillRect(x, y, 100, 100)
+    context.clearRect(0, 0, window.innerHeight, window.innerWidth);
     context.drawImage(linkRef.current, x, y);
-    
+
   }, [x, y]);
 
 
